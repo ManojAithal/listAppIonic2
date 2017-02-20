@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  The List:
+  
+  <!--<ion-list>
+    <button *ngFor='let item in items'>
+      {{item.title}}
+    </button>  
+  </ion-list>-->
+
+  <ion-list>
+
+    <ion-item-sliding *ngFor="let item of items" (click)='removeItem($event,item)'>
+          <button ion-item >
+            {{ item.name.first }}
+          </button> 
+          <ion-item-options>
+            <button ion-button color='danger'>Delete</button>
+          </ion-item-options>
+    </ion-item-sliding>
+
+       
+  </ion-list>
+ 
+</ion-content>
